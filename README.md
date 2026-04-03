@@ -4,6 +4,17 @@ An AI-powered Lecture Recorder & Summarizer built with React Native (Expo). Ciph
 
 ---
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a5f090c2-c731-4036-97bd-0a573afccc82" width="22%" />
+  <img src="https://github.com/user-attachments/assets/a34de44e-a69a-4978-ada2-06ee393a8b51" width="22%" />
+  <img src="https://github.com/user-attachments/assets/734d6208-5f28-4af2-8e0d-5143d634dc7f" width="22%" />
+  <img src="https://github.com/user-attachments/assets/555ed712-7ab9-4226-94fc-91ba9b1c8ed8" width="22%" />
+</p>
+
+---
+
 ## 🚀 Quick Start Guide
 
 Get up and running with CipherNotes in a few simple steps.
