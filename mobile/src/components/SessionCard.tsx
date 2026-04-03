@@ -23,8 +23,7 @@ export const SessionCard: React.FC<SessionCardProps> = ({
       style={({ pressed }) => [
         styles.card,
         {
-          backgroundColor: theme.card,
-          borderColor: theme.border,
+          backgroundColor: theme.surfaceContainer,
           opacity: pressed ? 0.8 : 1,
         },
       ]}
@@ -52,12 +51,12 @@ export const SessionCard: React.FC<SessionCardProps> = ({
           style={({ pressed }) => [
             styles.deleteButton,
             {
-              borderColor: theme.danger,
+              borderColor: theme.ghostBorderStrong,
               opacity: pressed ? 0.8 : 1,
             },
           ]}
         >
-          <Text style={[styles.deleteText, { color: theme.danger }]}>
+          <Text style={[styles.deleteText, { color: theme.secondary }]}>
             Delete
           </Text>
         </Pressable>
@@ -68,10 +67,9 @@ export const SessionCard: React.FC<SessionCardProps> = ({
 
 const styles = StyleSheet.create({
   card: {
-    borderWidth: 1,
-    borderRadius: 16,
+    borderRadius: 14,
     padding: 14,
-    marginBottom: 12,
+    marginBottom: 14,
   },
   headerRow: {
     flexDirection: "row",
@@ -81,10 +79,13 @@ const styles = StyleSheet.create({
   subject: {
     fontSize: 17,
     fontWeight: "700",
+    letterSpacing: -0.34,
   },
   meta: {
     fontSize: 13,
     marginTop: 4,
+    textTransform: "uppercase",
+    letterSpacing: 1,
   },
   badgeWrap: {
     marginTop: 10,
@@ -96,8 +97,8 @@ const styles = StyleSheet.create({
   deleteButton: {
     marginTop: 12,
     alignSelf: "flex-start",
-    borderWidth: 1,
-    borderRadius: 999,
+    borderWidth: 0.5,
+    borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 6,
   },

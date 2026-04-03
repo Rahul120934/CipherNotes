@@ -23,11 +23,16 @@ const TabsNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        headerStyle: { backgroundColor: theme.card },
+        headerStyle: { backgroundColor: theme.surfaceContainerHigh },
         headerTintColor: theme.text,
+        headerTitleStyle: { fontWeight: "700" },
         tabBarStyle: {
-          backgroundColor: theme.card,
-          borderTopColor: theme.border,
+          backgroundColor:
+            theme.background === "#131318"
+              ? "rgba(42, 43, 54, 0.84)"
+              : "rgba(255, 255, 255, 0.84)",
+          borderTopWidth: 0.5,
+          borderTopColor: theme.ghostBorder,
         },
         tabBarActiveTintColor: theme.primary,
         tabBarInactiveTintColor: theme.mutedText,
@@ -83,8 +88,9 @@ export const AppNavigator: React.FC = () => {
       <Stack.Navigator
         screenOptions={{
           contentStyle: { backgroundColor: theme.background },
-          headerStyle: { backgroundColor: theme.card },
+          headerStyle: { backgroundColor: theme.surfaceContainerHigh },
           headerTintColor: theme.text,
+          headerTitleStyle: { fontWeight: "700" },
         }}
       >
         <Stack.Screen

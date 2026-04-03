@@ -90,7 +90,7 @@ export const SessionDetailScreen: React.FC = () => {
           key={`${question.question}-${index}`}
           style={[
             styles.questionCard,
-            { backgroundColor: theme.card, borderColor: theme.border },
+            { backgroundColor: theme.surfaceContainerLow },
           ]}
         >
           <Text
@@ -120,12 +120,12 @@ export const SessionDetailScreen: React.FC = () => {
         style={({ pressed }) => [
           styles.deleteButton,
           {
-            borderColor: theme.danger,
+            borderColor: theme.ghostBorderStrong,
             opacity: pressed ? 0.8 : 1,
           },
         ]}
       >
-        <Text style={[styles.deleteText, { color: theme.danger }]}>
+        <Text style={[styles.deleteText, { color: theme.secondary }]}>
           Delete Session
         </Text>
       </Pressable>
@@ -135,9 +135,14 @@ export const SessionDetailScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16, paddingBottom: 30 },
+  content: {
+    paddingLeft: 20,
+    paddingRight: 12,
+    paddingBottom: 30,
+    paddingTop: 12,
+  },
   centered: { flex: 1, justifyContent: "center", alignItems: "center" },
-  title: { fontSize: 24, fontWeight: "700" },
+  title: { fontSize: 24, fontWeight: "700", letterSpacing: -0.48 },
   meta: { marginTop: 5, marginBottom: 12 },
   sectionTitle: {
     marginTop: 20,
@@ -148,17 +153,16 @@ const styles = StyleSheet.create({
   body: { lineHeight: 22 },
   bullet: { marginBottom: 6, lineHeight: 21 },
   questionCard: {
-    borderWidth: 1,
     borderRadius: 14,
     padding: 12,
-    marginBottom: 10,
+    marginBottom: 12,
   },
   question: { fontWeight: "600", marginBottom: 6, lineHeight: 20 },
   option: { marginTop: 3 },
   deleteButton: {
     marginTop: 20,
-    borderWidth: 1,
-    borderRadius: 12,
+    borderWidth: 0.5,
+    borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 12,

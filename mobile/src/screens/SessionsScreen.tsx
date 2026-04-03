@@ -60,8 +60,8 @@ export const SessionsScreen: React.FC = () => {
           styles.searchInput,
           {
             color: theme.text,
-            backgroundColor: theme.card,
-            borderColor: theme.border,
+            backgroundColor: theme.surfaceContainerLowest,
+            borderLeftColor: theme.ghostBorderStrong,
           },
         ]}
       />
@@ -90,13 +90,18 @@ export const SessionsScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16, paddingBottom: 24 },
-  title: { fontSize: 24, fontWeight: "700" },
+  content: {
+    paddingLeft: 20,
+    paddingRight: 12,
+    paddingBottom: 24,
+    paddingTop: 12,
+  },
+  title: { fontSize: 24, fontWeight: "700", letterSpacing: -0.48 },
   searchInput: {
     marginTop: 14,
     marginBottom: 14,
-    borderWidth: 1,
-    borderRadius: 12,
+    borderLeftWidth: 0.5,
+    borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 11,
   },

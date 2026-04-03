@@ -27,7 +27,7 @@ export const HomeScreen: React.FC = () => {
       <View
         style={[
           styles.heroCard,
-          { backgroundColor: theme.card, borderColor: theme.border },
+          { backgroundColor: theme.surfaceContainerLow },
         ]}
       >
         <Text style={[styles.heroText, { color: theme.text }]}>
@@ -58,10 +58,15 @@ export const HomeScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16, paddingBottom: 32 },
-  title: { fontSize: 28, fontWeight: "700" },
+  content: {
+    paddingLeft: 20,
+    paddingRight: 12,
+    paddingBottom: 32,
+    paddingTop: 12,
+  },
+  title: { fontSize: 28, fontWeight: "700", letterSpacing: -0.6 },
   subtitle: { marginTop: 6, fontSize: 14 },
-  heroCard: { borderWidth: 1, borderRadius: 16, padding: 14, marginTop: 16 },
+  heroCard: { borderRadius: 14, padding: 14, marginTop: 16 },
   heroText: { lineHeight: 22, fontSize: 15 },
   sectionTitle: {
     marginTop: 20,

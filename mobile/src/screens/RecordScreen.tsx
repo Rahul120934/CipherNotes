@@ -130,8 +130,8 @@ export const RecordScreen: React.FC = () => {
           styles.input,
           {
             color: theme.text,
-            borderColor: theme.border,
-            backgroundColor: theme.card,
+            borderLeftColor: theme.ghostBorderStrong,
+            backgroundColor: theme.surfaceContainerLowest,
           },
         ]}
       />
@@ -144,8 +144,8 @@ export const RecordScreen: React.FC = () => {
           styles.input,
           {
             color: theme.text,
-            borderColor: theme.border,
-            backgroundColor: theme.card,
+            borderLeftColor: theme.ghostBorderStrong,
+            backgroundColor: theme.surfaceContainerLowest,
           },
         ]}
       />
@@ -155,7 +155,9 @@ export const RecordScreen: React.FC = () => {
         style={({ pressed }) => [
           styles.recordButton,
           {
-            backgroundColor: isRecording ? theme.danger : theme.primary,
+            backgroundColor: isRecording
+              ? theme.secondaryContainer
+              : theme.primaryContainer,
             opacity: pressed ? 0.8 : 1,
           },
         ]}
@@ -177,12 +179,12 @@ export const RecordScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16 },
-  title: { fontSize: 24, fontWeight: "700" },
+  content: { paddingLeft: 20, paddingRight: 12, paddingTop: 12 },
+  title: { fontSize: 24, fontWeight: "700", letterSpacing: -0.48 },
   subtitle: { marginTop: 6, marginBottom: 18, fontSize: 14 },
   input: {
-    borderWidth: 1,
-    borderRadius: 12,
+    borderLeftWidth: 0.5,
+    borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 12,
     marginBottom: 12,
@@ -195,7 +197,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  recordButtonText: { color: "#0a0a0f", fontSize: 17, fontWeight: "700" },
+  recordButtonText: { color: "#00363a", fontSize: 17, fontWeight: "700" },
   processingWrap: { marginTop: 20, alignItems: "center" },
   processingText: { marginTop: 10, fontSize: 14 },
 });
